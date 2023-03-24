@@ -4,6 +4,7 @@ using namespace std;
 char cifra_più_significativa (int n){
 	returtn to_string(n)[0];
 }
+//funzione
 bool verifica_cifra(int n1,int n2)		{
 	int prodotto = n1 * n2;
 	int somma = n1 + n2;
