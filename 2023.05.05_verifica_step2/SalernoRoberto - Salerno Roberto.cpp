@@ -7,7 +7,7 @@ using namespace std;
 
 // Definizione della funzione per la lettura del file
 void LeggiFile(string filename, vector<string>& vet) {
-ifstream file("C:\\Users\\STUDENTE\\Desktop\\Nuova cartella\\F1.txt");
+ifstream file(filename);
 if(file.is_open()) {
 string riga;
 while(getline(file, riga)) {
@@ -41,7 +41,7 @@ indice = Cerca(vet, key); // cerca la prossima occorrenza della key
 
 // Definizione della funzione per la scrittura del file
 void ScriviFile(string filename, vector<string>& vet) {
-ofstream file("C:\\Users\\STUDENTE\\Desktop\\Nuova cartella\\F2.txt");
+ofstream file(filename);
 if(file.is_open()) {
 for(int i=0; i<vet.size(); i++) {
 file << vet[i] << endl;
@@ -55,8 +55,8 @@ cout << "Impossibile creare il file!" << endl;
 
 int main() {
 vector<string> vet;
-LeggiFile("C:\\Users\\STUDENTE\\Desktop\\Nuova cartella\\F1.txt", vet);
+LeggiFile("F1.txt", vet);
 EliminaKey(vet, "ROSSI");
-ScriviFile("C:\\Users\\STUDENTE\\Desktop\\Nuova cartella\\F2.txt", vet);
+ScriviFile("F2.txt", vet);
 return 0;
 }
